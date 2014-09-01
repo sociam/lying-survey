@@ -18,7 +18,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 					
                 var submitAnswers = function (uuid, question_id, answer, misc) {
                     if (!misc) { misc = ""; }
-                    if ($scope.userid === undefined) { console.log('skipping!'); return; }
+                    if ($scope.userid === undefined || $scope.resp.start) { console.log('skipping!'); return; }
                     answer = JSON.stringify(answer);
                     misc = JSON.stringify(misc);
                     jQuery.ajax({
@@ -49,8 +49,8 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			    	console.log('stage ! ', x, $scope.laststage);
 			    	if (x === undefined) { return; }
 			    	var lS = $scope.laststage,
-			    		qid = 'q'+(lS-1),
-			    		data = $scope.resp["q"+(lS-1)],
+			    		qid = 'q'+(lS-1), // question # is stage -1 
+			    		data = $scope.resp["q"+(lS-1)], // data for that question
 			    		nextResp = $scope.resp["q"+(x-1)];
 
 			    	if (lS - 1 > 0) { 
@@ -61,7 +61,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 	                }
 			    	resetTime();
 			    	// initialise next response
-		    		$scope.resp["q"+(x-1)] = $scope.resp["q"+(x-1)] === undefined ? {} : $scope.resp["q"+(x-1)];
+		    		$scope.resp["q"+(x-1)] = nextResp === undefined ? {} : nextResp;
 
 		    		// reset for next run
 		    		$scope.laststage = $scope.stage;
