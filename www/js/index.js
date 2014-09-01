@@ -33,7 +33,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 					$scope.stage = 1;
 					resetTime();
 			    };
-			    $scope.next = function(qid, data) { 
+			    $scope.next = function(qid, data, misc) { 
 			    	$scope.stage++;
 			    	var elapsed = (new Date()).valueOf() - stageTime;
 			    	// add elapsed here
