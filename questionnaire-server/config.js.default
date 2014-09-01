@@ -1,0 +1,5 @@
+var config = {};
+
+config.connString = "postgres://USER:PASS@localhost/DBNAME";
+
+module.exports = config;
