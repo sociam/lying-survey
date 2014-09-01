@@ -217,10 +217,8 @@
                 <div class="likert">
                     <div class="title">What is your gender:</div>
                     <div ng-class="{btn:true, 'btn-default':true, bluebg:true, 'active': resp.qdemo.gender=='undisclosed'}" ng-click="resp.qdemo.gender='undisclosed'">Undisclosed</div>
-                    <div ng-class="{btn:true, 'btn-default':true, bluebg:true, 'active': resp.qdemo.gender=='male'}" ng-click="resp.qdemo.gender='male'">Male</div>
-                    <div ng-class="{btn:true, 'btn-default':true, bluebg:true, 'active': resp.qdemo.gender=='female'}" ng-click="resp.qdemo.gender='female'">Female</div>
-                    <div ng-class="{btn:true, 'btn-default':true, bluebg:true, 'active': resp.qdemo.gender=='other'}" ng-click="resp.qdemo.gender='other'">Other:</div>
-                    <input ng-model="resp.qdemo.genderother" type='text' />
+                    <div ng-class="{btn:true, 'btn-default':true, bluebg:true, 'active': resp.qdemo.gender=='disclosed'}" ng-click="resp.qdemo.gender='disclosed'">Disclosed:</div>
+                    <input ng-model="resp.qdemo.genderdisclosed" type='text' />
                 </div>
             </div><div class="col2">
                 <h2>How much time do you use accessing social media?</h2> 
