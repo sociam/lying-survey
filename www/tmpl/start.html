@@ -1,10 +1,8 @@
 <div class="survey">
-	<swipe-page page="stage">
-		<div class="page">
+	<swipe-page page="stage"><div class="page">
 			<h1>welcome to our survey</h1>
 			<div class="btn-next btn btn-default" ng-click="startSurvey()">Start survey</div>
-		</div>
-		<div class="page">
+		</div><div class="page">
 			<h1> Question 1 </h1>		
 			<h2> How much do you use these social media platforms? </h2>
 			<div class="qlabel">Facebook:</div><div class="btn-group likert">
@@ -15,16 +13,13 @@
 				<div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':hdif.feel=='5'}" ng-click="sethdif('feel','5')">5 -many times a day&nbsp;&nbsp;</div>
 			</div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div>
-		<div class="page">
+		</div><div class="page">
 			<h1> question 2 </h1>
 			<h2> blah blah blah </h2>
 			<textarea ng-model="blah"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div>
-		<div class="page">
+		</div><div class="page">
 			<h1>You're done! Thank you for taking part!</h1>
-		</div>
-	</swipe-page>
+		</div></swipe-page>
 </div>

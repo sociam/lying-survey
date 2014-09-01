@@ -14,7 +14,7 @@ angular.module('survey')
 				var u = utils, sa = function(f) { utils.safeApply($scope, f); },			
 					scrollBlock = false, to, 
 					viewport = $element.find('.viewport'),
-					w = viewport.outerWidth(),
+					w = viewport.innerWidth(),
 					el, evtseq = [];
 
 				window.$el = $element;
