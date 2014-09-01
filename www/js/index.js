@@ -8,12 +8,23 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			url:'/start',
 			templateUrl:'tmpl/start.html',
 			controller:function($scope, $state, utils) {
-				
 				var u = utils, 
 					sa = function(f) { utils.safeApply($scope, f); },
 					stageTime = 0,
 					resetTime = function() { stageTime = (new Date()).valueOf(); };
 
+                var submitAnswers = function (uuid, question_id, answer, misc) {
+                    answer = JSON.stringify(answer);
+                    misc = JSON.stringify(misc);
+                    jQuery.ajax({
+                        url: "http://localhost:3000/submit", // customise this
+                        type: "POST",
+                        data: {"uuid": uuid, "question_id": question_id, "answer": answer, "misc": misc},
+                        success: function () { console.log("submitted successfully"); },
+                        error: function (jqXHR, textStatus, errorThrown) { console.log("submission failure", textStatus, errorThrown); },
+                    });
+                };
+                window.sa = submitAnswers;
 			    $scope.stage = 0;
 			    $scope.startSurvey = function() { 
 					$scope.userid = u.guid();
@@ -24,6 +35,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			    	$scope.stage++;
 			    	var elapsed = (new Date()).valueOf() - stageTime;
 			    	// add elapsed here
+                    submitAnswers($scope.userid, qid, data, misc);			    	
 			    	resetTime();
 			    };
 			    $scope.prev = function() { 

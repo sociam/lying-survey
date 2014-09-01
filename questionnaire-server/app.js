@@ -20,21 +20,21 @@ var requireParams = function (req, res, params) {
 };
 
 // CORS
-/*
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     next();
 });
-*/
 
 app.post('/submit', function(req, res) {
-    if (requireParams(req, res, ["uuid", "question_id", "answer", "misc"])){
+    if (requireParams(req, res, ["uuid", "question_id", "answer"])){
         return; // it handled the response
     }
 
+    var misc = req.body.misc || "";
+
     var q = "INSERT INTO submissions (uuid, question_id, answer, misc, submitted) VALUES ($1, $2, $3, $4, current_timestamp)";
-    var params = [req.body.uuid, req.body.question_id, req.body.answer, req.body.misc];
+    var params = [req.body.uuid, req.body.question_id, req.body.answer, misc];
 
     pg.connect(config.connString, function (err, client, done) {
         if (err) {
