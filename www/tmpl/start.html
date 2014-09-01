@@ -5,14 +5,20 @@
 		</div><div class="page">
 			<h1> Question 1 </h1>		
 			<h2> How much do you use these social media platforms? </h2>
-			<div class="qlabel">Facebook:</div><div class="btn-group likert">
-				<div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':hdif.feel=='1'}" ng-click="sethdif('feel','1')">1 -never </div>
-				<div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':hdif.feel=='2'}" ng-click="sethdif('feel','2')">2</div>
-				<div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':hdif.feel=='3'}" ng-click="sethdif('feel','3')">3</div>
-				<div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':hdif.feel=='4'}" ng-click="sethdif('feel','4')">4</div>
-				<div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':hdif.feel=='5'}" ng-click="sethdif('feel','5')">5 -many times a day&nbsp;&nbsp;</div>
+			<div class="likert">
+				<div class="title">Facebook:</div>
+				<div class='lbl'>never - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q1.facebook=='1'}" ng-click="resp.q1.facebook=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q1.facebook=='2'}" ng-click="resp.q1.facebook=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q1.facebook=='3'}" ng-click="resp.q1.facebook=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q1.facebook=='4'}" ng-click="resp.q1.facebook=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q1.facebook=='5'}" ng-click="resp.q1.facebook=5">5</div><div class='lbl'> - many times a day</div>
 			</div>
-			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+			<div class="likert">
+				<div class="title">Instagram:</div>
+				<div class='lbl'>never - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q1.instagram=='1'}" ng-click="resp.q1.instagram=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q1.instagram=='2'}" ng-click="resp.q1.instagram=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q1.instagram=='3'}" ng-click="resp.q1.instagram=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q1.instagram=='4'}" ng-click="resp.q1.instagram=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q1.instagram=='5'}" ng-click="resp.q1.instagram=5">5</div><div class='lbl'> - many times a day</div>
+			</div>
+			<div class="likert">
+				<div class="title">Twitter:</div>
+				<div class='lbl'>never - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q1.twitter=='1'}" ng-click="resp.q1.twitter=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q1.twitter=='2'}" ng-click="resp.q1.twitter=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q1.twitter=='3'}" ng-click="resp.q1.twitter=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q1.twitter=='4'}" ng-click="resp.q1.twitter=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q1.twitter=='5'}" ng-click="resp.q1.twitter=5">5</div><div class='lbl'> - many times a day</div>
+			</div>
+
+			<div class="btn-next btn btn-default" ng-click="next('q1',resp.q1)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div><div class="page">
 			<h1> question 2 </h1>
 			<h2> blah blah blah </h2>
