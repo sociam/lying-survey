@@ -1,38 +1,44 @@
 <div class="survey">
-	<swipe-page page="stage"><div class="page">
+	<swipe-page page="stage"><div class="page splash">
 
 			<img class='cat' src="img/cat.jpg">	
 
 			<h1>Privacy and Identity on Social Media: A Survey</h1>
 			<p>
-				This survey is seeks to understand people's privacy expectations
-				and strategies for maintaining privacy online. 
+				We are running a survey in order to understand the kinds of 
+				expectations for privacy people have online, and the kinds
+				of strategies they use to maintain it on-line communities. 
 			</p>
 			<p>
-				Participation is <b>purely anonymous</b> and <b>voluntary</b>, and you may 
-				ask us to withdraw your data at any time, by providing us your unique
-				randomly generated username that will be presented on the first screen.
+				Participation is <b>purely anonymous</b> and <b>voluntary</b>. You may 
+				withdraw from the study at any time. If you wish for us to delete all the
+				data you have submitted at any time, you may email us asking to	do so with 
+				the unique, randomly-generated code we will provide you on the first screen.  
+				We will then delete your data and confirm this.
 			</p>
-			<p class='ergo'> University of Southampton ERGO Ethics Approval: #11458 </p>
-			<p class='investigators'>  Investigators: 
-				<ul>
-					<li> Max Van Kleek (<a href="http://twitter.com/emax" target="_top">@emax</a>, emax@ecs.soton.ac.uk) 
-					<li> Daniel A. Smith (<a href="http://twitter.com/drdanielasmith" target="_top">@drdanielasmith</a>, ds@ecs.soton.ac.uk)
-					<li> Dave Murray-Rust (d.murray-rust@ed.ac.uk)
-					<li> Amy Guy (Amy.Guy@ed.ac.uk) 
-					<li> Laura Dragan (lcd@ecs.soton.ac.uk)
-				</ul>
-			</p>
+			<div class="infobox">
+				<p class='ergo'> University of Southampton ERGO Ethics Approval: #11458 </p>
+				<p class='investigators'>  Investigators: 
+					<ul>
+						<li> Max Van Kleek (<a href="http://twitter.com/emax" target="_top">@emax</a>, emax@ecs.soton.ac.uk) </li>
+						<li> Daniel A. Smith (<a href="http://twitter.com/drdanielasmith" target="_top">@drdanielasmith</a>, ds@ecs.soton.ac.uk)</li>
+						<li> Dave Murray-Rust (d.murray-rust@ed.ac.uk)</li>
+						<li> Amy Guy (Amy.Guy@ed.ac.uk) </li>
+						<li> Laura Dragan (lcd@ecs.soton.ac.uk)</li>
+					</ul>
+				</p>
+			</div>
 
 			<p>
-				To participate, you must be at least 18 years old.  Please click the check box below to certify you are at least this age.
+				To participate, you <i>must</i> be at least 18 years old.  Please click the check box below to certify you are at least this age.
 			</p>
 
 			<div class="">
-				<input type="checkbox" ng-model="resp.start" value="false"> - I'm at least 18 years old.
+				<input type="checkbox" ng-model="resp.start" value="false"> - I'm at least 18 years old and understand the above 
 			</div>
 
-			<div class="btn-next btn btn-default" ng-disabled="!resp.start" ng-click="startSurvey()">Start survey</div>
+			<div class="btn-next btn btn-default" ng-disabled="!resp.start" ng-click="startSurvey()">Start the survey!</div>
+
 		</div><div class="page">
 
 			<h1>Your unique participant ID:</h1>
