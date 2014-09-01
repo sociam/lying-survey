@@ -13,13 +13,16 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 
 			    $scope.startSurvey = function() { 
 					$scope.userid = u.guid();
+					$scope.qid = 1;
 					// advance!
 			    };
-			    $scope.next = function() { 
+			    $scope.next = function(data) { 
 			    	console.log('next >> ');
+			    	$scope.qid++;
 			    };
 			    $scope.prev = function() { 
 			    	console.log('<< prev ');
+			    	$scope.qid--;
 			    };
 			}
 		});
