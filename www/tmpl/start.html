@@ -20,11 +20,41 @@
 
 			<div class="btn-next btn btn-default" ng-click="next('q1',resp.q1)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div><div class="page">
-			<h1> question 2 </h1>
-			<h2> blah blah blah </h2>
-			<textarea ng-model="blah"></textarea>
+            <h1> Question 6 </h1>
+            <h2>Have you ever lied about what you were doing, or where you were, publicly on social media (e.g. Twitter, Facebook etc?)  If so, why?</h2>
+			<textarea ng-model="resp.q6.answer"></textarea>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>	
+			<div class="btn-next btn btn-default" ng-click="next('q6',resp.q6)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+		</div><div class="page"> 
+            <h1> Question 7 </h1>
+            <h2>Have you lied about other things besides what you were doing/where you were on social media? How often and why?</h2>
+			<textarea ng-model="resp.q7.answer"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
-			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+			<div class="btn-next btn btn-default" ng-click="next('q7',resp.q7)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+		</div><div class="page">
+            <h1> Question 8 </h1>
+            <h2>Do hide your real name/identity on any social media platforms? Do you use pseudonyms? Why do you do this?</h2>
+			<textarea ng-model="resp.q8.answer"></textarea>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
+			<div class="btn-next btn btn-default" ng-click="next('q8',resp.q8)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+		</div><div class="page">
+            <h1> Question 9 </h1>
+            <h2>Do you use any fictional personas on social media? If so, what for and why? (Please do not include the names or specifics of your personas here).</h2>
+			<textarea ng-model="resp.q9.answer"></textarea>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
+			<div class="btn-next btn btn-default" ng-click="next('q9',resp.q9)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+		</div><div class="page"> 
+            <h1> Question 10 </h1>
+            <h2>Have you ever deleted anything that you posted in order to prevent the wrong people from seeing it?  Can you describe why you did this?</h2>
+			<textarea ng-model="resp.q10.answer"></textarea>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
+			<div class="btn-next btn btn-default" ng-click="next('q10',resp.q10)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+		</div><div class="page">
+            <h1> Question 11 </h1>
+            <h2>Have you ever felt like your privacy was compromised through social media? Can you describe abstractly and briefly what happened? How did this incident change how you subsequently social media platforms?</h2>
+			<textarea ng-model="resp.q11.answer"></textarea>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
+			<div class="btn-next btn btn-default" ng-click="next('q11',resp.q11)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div><div class="page">
 			<h1>You're done! Thank you for taking part!</h1>
 		</div></swipe-page>
