@@ -13,7 +13,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 					stageTime = 0,
 					resetTime = function() { stageTime = (new Date()).valueOf(); },
 					resetVals = function() { 
-						sa(function() { $scope.resp = {q1:{},q2:{},q3:{},q4:{},q5:{},q6:{},q7:{}}; });
+						sa(function() { $scope.resp = {}; });
 					};
 					
                 var submitAnswers = function (uuid, question_id, answer, misc) {
@@ -30,24 +30,40 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
                 };
                 window.sa = submitAnswers;
 			    $scope.stage = 0;
+			    $scope.laststage = 0;
+			    $scope.resp = {};
 			    $scope.startSurvey = function() { 
 					$scope.userid = [u.guid(4),u.guid(4),u.guid(4)].join('-');
 					resetTime();
-					resetVals();					
+					resetVals();	
+					$scope.laststage = 0;				
 					$scope.stage = 1;
 			    };
 			    $scope.next = function(qid, data, misc) { 
 			    	$scope.stage++;
-			    	var elapsed = (new Date()).valueOf() - stageTime;
-			    	// add elapsed here
-                    misc = {"elapsed": elapsed, "stageTime": stageTime, "misc": misc};
-                    submitAnswers($scope.userid, qid, data, misc);
-			    	resetTime();
 			    };
 			    $scope.prev = function() { 
-			    	console.log('<< prev ');
 			    	$scope.stage--;
 			    };
+			    $scope.$watch('stage', function(x) { 
+			    	console.log('stage ! ', x, $scope.laststage);
+			    	if (x === undefined) { return; }
+			    	var lS = $scope.laststage,
+			    		qid = 'q'+(lS-1),
+			    		data = $scope.resp["q"+(lS-1)],
+			    		nextResp = $scope.resp["q"+(x-1)];
+
+			    	var elapsed = (new Date()).valueOf() - stageTime;
+                    misc = {"elapsed": elapsed, "stageTime": stageTime, "misc": ''};
+                    console.log('submitting answers >> ', $scope.userid, qid, data, misc);
+                    submitAnswers($scope.userid, qid, data, misc);
+			    	resetTime();
+			    	// initialise next response
+		    		$scope.resp["q"+(x-1)] = $scope.resp["q"+(x-1)] === undefined ? {} : $scope.resp["q"+(x-1)];
+
+		    		// reset for next run
+		    		$scope.laststage = $scope.stage;
+			    });
 			    $scope.startOver = function() {  resetVals(); $scope.stage = 0;   };
    			    window.ss = $scope;
 			}

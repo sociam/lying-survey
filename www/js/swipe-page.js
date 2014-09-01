@@ -20,18 +20,18 @@ angular.module('survey')
 				window.$el = $element;
 					
 				var update = function() { 
-					console.log('w is ', w);
+					// console.log('w is ', w);
 					var npages = $scope.npages = $element.find('.page').length;
 					$scope.dots = u.range(npages); 
 					$element.find('.page').outerWidth(w); // set to w.
 					var viewidth =(w+2)*npages;
-					console.info('setting viewport width ', viewidth); 
+					// console.info('setting viewport width ', viewidth); 
 					viewport.width(viewidth);			
 				};
 
 				$scope.$parent.$watch(function() { 
-					console.log('change'); 
-					console.log('viewportWidth > ', w, $element.find('.page').length);
+					// console.log('change'); 
+					// console.log('viewportWidth > ', w, $element.find('.page').length);
 					update();
 				});
 				$scope.clickDot = function(i) { 
