@@ -11,10 +11,11 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 				var u = utils, 
 					sa = function(f) { utils.safeApply($scope, f); },
 					stageTime = 0,
-					resetTime = function() { stageTime = (new Date()).valueOf(); };
-
-				$scope.resp = {q1:{},q2:{},q3:{}}; // keeps state
-
+					resetTime = function() { stageTime = (new Date()).valueOf(); },
+					resetVals = function() { 
+						sa(function() { $scope.resp = {q1:{},q2:{},q3:{},q4:{},q5:{},q6:{},q7:{}}; });
+					};
+					
                 var submitAnswers = function (uuid, question_id, answer, misc) {
                     answer = JSON.stringify(answer);
                     misc = JSON.stringify(misc);
@@ -30,8 +31,9 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			    $scope.stage = 0;
 			    $scope.startSurvey = function() { 
 					$scope.userid = u.guid();
-					$scope.stage = 1;
 					resetTime();
+					resetVals();					
+					$scope.stage = 1;
 			    };
 			    $scope.next = function(qid, data, misc) { 
 			    	$scope.stage++;
