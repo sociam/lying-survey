@@ -16,6 +16,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 				$scope.resp = {q1:{},q2:{},q3:{}}; // keeps state
 
                 var submitAnswers = function (uuid, question_id, answer, misc) {
+                    if (!misc) { misc = ""; }
                     answer = JSON.stringify(answer);
                     misc = JSON.stringify(misc);
                     jQuery.ajax({
