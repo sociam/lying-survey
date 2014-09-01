@@ -48,7 +48,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			    	console.log('<< prev ');
 			    	$scope.stage--;
 			    };
-			    $scope.startOver = function() {  reserVals(); $scope.stage = 0;   };
+			    $scope.startOver = function() {  resetVals(); $scope.stage = 0;   };
    			    window.ss = $scope;
 			}
 		});
