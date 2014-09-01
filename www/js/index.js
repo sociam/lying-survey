@@ -10,9 +10,24 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			controller:function($scope, $state, utils) {
 				var u = utils, sa = function(f) { utils.safeApply($scope, f); };
 			    window.ss = $scope;
+
+			    $scope.startSurvey = function() { 
+					$scope.userid = u.guid();
+					// advance!
+			    };
+			    $scope.next = function() { 
+			    	console.log('next >> ');
+			    };
+			    $scope.prev = function() { 
+			    	console.log('<< prev ');
+			    };
 			}
 		});
 	}).controller('main', function($scope, utils) { 
 		var u = utils, sa = function(f) { utils.safeApply($scope, f); };
-		$scope.userid = u.guid();
 	});
+
+
+
+
+
