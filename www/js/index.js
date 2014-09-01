@@ -40,6 +40,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			    	$scope.stage++;
 			    	var elapsed = (new Date()).valueOf() - stageTime;
 			    	// add elapsed here
+                    misc = {"elapsed": elapsed, "stageTime": stageTime, "misc": misc};
                     submitAnswers($scope.userid, qid, data, misc);
 			    	resetTime();
 			    };
