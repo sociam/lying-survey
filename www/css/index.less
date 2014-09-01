@@ -61,6 +61,7 @@ h2 { font-size:15pt; }
 .survey {
   height:100%;
   padding:0px;
+  .cat { margin:20px 0px 20px 0px; }
   .page {
     height:100%;
     width:98%;
@@ -76,6 +77,10 @@ h2 { font-size:15pt; }
   }
   .likert { 
     border-bottom:1px solid #eee;
+    &:last-child { 
+      border-bottom:none;
+    }
+
     font-size:14pt;    
     .title { margin:0px 0px 10px 0px; color:@headcolor; }
     padding:10px 0px 10px 0px;
@@ -88,7 +93,7 @@ h2 { font-size:15pt; }
     }
     margin:0px 0px 0px 0px;
   }
-  textarea { width:100%; min-height:200px; }
+  textarea { width:100%; min-height:130px; }
   .likert1 { background-color:rgba(255,0,0,0.3); color:black; }
   .likert2 { background-color:rgba(255,153,0,0.3); color:black; }
   .likert3 { background-color:rgba(255,255,0,0.3); color:black; }
@@ -101,6 +106,15 @@ h2 { font-size:15pt; }
     margin:0px;
     vertical-align:top;
     * { vertical-align:top; }
+  }
+  .btn-next, .btn-prev {
+      margin-top:20px;
+  }
+  .userid {
+    background-color:#fef;
+    border:1px solid #eee;
+    font-size:13pt;
+    padding:20px;
   }
 }
 

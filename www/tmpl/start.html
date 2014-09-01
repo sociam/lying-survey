@@ -1,7 +1,44 @@
 <div class="survey">
 	<swipe-page page="stage"><div class="page">
-			<h1>welcome to our survey</h1>
+
+			<img class='cat' src="img/cat.jpg">	
+
+			<h1>Privacy and Identity on Social Media: A Survey</h1>
+			<p>
+				This survey is seeks to understand people's privacy expectations
+				and strategies for maintaining privacy online. 
+			</p>
+			<p>
+				Participation is <b>purely anonymous</b> and <b>voluntary</b>, and you may 
+				ask us to withdraw your data at any time, by providing us your unique
+				randomly generated username.
+			</p>
+			<p class='ergo'> University of Southampton ERGO Ethics Approval: #11458 </p>
+			<p class='investigators'>  Investigators: 
+				<ul>
+					<li> Max Van Kleek (<a href="http://twitter.com/emax" target="_top">@emax</a>, emax@ecs.soton.ac.uk) 
+					<li> Daniel A. Smith (<a href="http://twitter.com/drdanielasmith" target="_top">@drdanielasmith</a>, ds@ecs.soton.ac.uk)
+					<li> Dave Murray-Rust (d.murray-rust@ed.ac.uk)
+					<li> Amy Guy (Amy.Guy@ed.ac.uk) 
+					<li> Laura Dragan (lcd@ecs.soton.ac.uk)
+				</ul>
+			</p>
 			<div class="btn-next btn btn-default" ng-click="startSurvey()">Start survey</div>
+		</div><div class="page">
+
+			<h1>Your unique participant ID:</h1>
+
+			<p> We have randomly generated you the following participant ID.  </p>
+
+			<p>
+				Please write this number down and keep it if you might wish to have us later retract your data or to
+				prove that you completed the survey.
+			</p>
+
+			<div class="userid" ng-bind="userid"></div>
+
+			<div class="btn-next btn btn-default" ng-click="next('q0', {})">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
+
 		</div><div class="page">
 			<h1> Question 1 </h1>		
 			<h2> How much do you use these social media platforms? </h2>
@@ -45,6 +82,7 @@
 					<div class='lbl'>never - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q1.tumblr=='1'}" ng-click="resp.q1.tumblr=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q1.tumblr=='2'}" ng-click="resp.q1.tumblr=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q1.tumblr=='3'}" ng-click="resp.q1.tumblr=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q1.tumblr=='4'}" ng-click="resp.q1.tumblr=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q1.tumblr=='5'}" ng-click="resp.q1.tumblr=5">5</div><div class='lbl'> - many times a day</div>
 				</div>
 			</div>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q1',resp.q1)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div><div class="page">
 			<h1> Question 2 </h1>		
