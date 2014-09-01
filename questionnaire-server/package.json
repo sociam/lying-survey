@@ -1,0 +1,17 @@
+{
+  "name": "questionnaire-server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.6.7",
+    "express": "^4.8.7",
+    "pg": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Alexander Smith <daniel@danielsmith.eu> (https://danielsmith.eu/)",
+  "license": "ISC"
+}
