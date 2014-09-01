@@ -105,7 +105,7 @@
                 },
 				guid: function(len) {
 					len = len || 64;
-					var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ-';
+					var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ-abcdefghijklmnopqrstuvwxyz1234567890';
 					return this.range(0,len-1).map(function(x) {
 						return alpha[Math.floor(Math.random()*alpha.length)];
 					}).join('');

@@ -31,7 +31,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
                 window.sa = submitAnswers;
 			    $scope.stage = 0;
 			    $scope.startSurvey = function() { 
-					$scope.userid = u.guid();
+					$scope.userid = [u.guid(4),u.guid(4),u.guid(4)].join('-');
 					resetTime();
 					resetVals();					
 					$scope.stage = 1;
@@ -48,6 +48,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 			    	console.log('<< prev ');
 			    	$scope.stage--;
 			    };
+			    $scope.startOver = function() {  reserVals(); $scope.stage = 0;   };
    			    window.ss = $scope;
 			}
 		});
