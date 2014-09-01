@@ -17,6 +17,7 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 					};
 					
                 var submitAnswers = function (uuid, question_id, answer, misc) {
+                    if (!misc) { misc = ""; }
                     answer = JSON.stringify(answer);
                     misc = JSON.stringify(misc);
                     jQuery.ajax({
