@@ -71,6 +71,10 @@ h2 { font-size:15pt; }
   }
   .likert { 
     border-bottom:1px solid #eee;
+    &:last-child { 
+      border-bottom:none;
+    }
+
     font-size:14pt;    
     .title { margin:0px 0px 10px 0px; color:@headcolor; }
     padding:10px 0px 10px 0px;
@@ -96,6 +100,15 @@ h2 { font-size:15pt; }
     margin:0px;
     vertical-align:top;
     * { vertical-align:top; }
+  }
+  .btn-next, .btn-prev {
+      margin-top:20px;
+  }
+  .userid {
+    background-color:#fef;
+    border:1px solid #eee;
+    font-size:13pt;
+    padding:20px;
   }
 }
 
