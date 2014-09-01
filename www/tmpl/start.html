@@ -11,7 +11,7 @@
 			<p>
 				Participation is <b>purely anonymous</b> and <b>voluntary</b>, and you may 
 				ask us to withdraw your data at any time, by providing us your unique
-				randomly generated username.
+				randomly generated username that will be presented on the first screen.
 			</p>
 			<p class='ergo'> University of Southampton ERGO Ethics Approval: #11458 </p>
 			<p class='investigators'>  Investigators: 
@@ -23,7 +23,16 @@
 					<li> Laura Dragan (lcd@ecs.soton.ac.uk)
 				</ul>
 			</p>
-			<div class="btn-next btn btn-default" ng-click="startSurvey()">Start survey</div>
+
+			<p>
+				To participate, you must be at least 18 years old.  Please click the check box below to certify you are at least this age.
+			</p>
+
+			<div class="">
+				<input type="checkbox" ng-model="resp.start" value="false"> - I'm at least 18 years old.
+			</div>
+
+			<div class="btn-next btn btn-default" ng-disabled="!resp.start" ng-click="startSurvey()">Start survey</div>
 		</div><div class="page">
 
 			<h1>Your unique participant ID:</h1>
