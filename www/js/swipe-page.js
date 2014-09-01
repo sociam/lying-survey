@@ -7,13 +7,14 @@ angular.module('survey')
 			restrict:'E',
 			transclude:true,
 			replace:true,
+			scope:{activepage:'=page'},
 			templateUrl:'tmpl/swipe-page.html',
 			controller:function($scope, $element, $transclude, utils) {
 
 				var u = utils, sa = function(f) { utils.safeApply($scope, f); },			
 					scrollBlock = false, to, 
 					viewport = $element.find('.viewport'),
-					w = viewport.outerWidth(),
+					w = viewport.innerWidth(),
 					el, evtseq = [];
 
 				window.$el = $element;
@@ -33,7 +34,6 @@ angular.module('survey')
 					console.log('viewportWidth > ', w, $element.find('.page').length);
 					update();
 				});
-
 				$scope.clickDot = function(i) { 
 					$scope.activepage = i;
 					var currentElement = $element.find('.page')[i],
@@ -52,13 +52,6 @@ angular.module('survey')
 						sa(function() { $scope.clickDot($scope.activepage - 1); });						
 					}
 				};
-				// $element.on('scroll', function() { 
-				// 	if (to) { clearTimeout(to); }					
-				// 	if (!w || scrollBlock) { console.log('returning ', w, scrollBlock); return; }
-				// 	console.log('user scroll', $element.scrollLeft());										
-				// 	to = setTimeout(snapScroll, 10); 
-				// 	if (evtseq[0] = 'ts') { evtseq[1] = 'scroll'; };
-				// });
 
 				$element.on('scroll', function() { 
 					if (evtseq[0] == 'ts') {
@@ -79,12 +72,9 @@ angular.module('survey')
 						snapScroll();
 					}
 				});
-				$element.on('click', function() { 
-					console.log('clearing');
-					evtseq = [];
-				});
-
+				$element.on('click', function() { evtseq = []; });
 				$scope.clickDot(0);
+				$scope.$watch('activepage', function() { $scope.clickDot($scope.activepage); });
 				update();				
 			}
 		};
