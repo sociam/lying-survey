@@ -1,0 +1,59 @@
+* { 
+  box-sizing:border-box;
+  // -webkit-tap-highlight-color: rgba(0,0,0,0);  make transparent link selection, adjust last value opacity 0 to 1.0 
+  // -webkit-font-smoothing:subpixel-antialiased; // antialised
+  // transform: translate3d(0,0,0);  
+  // -webkit-backface-visibility: hidden; 
+  // -webkit-transform: translateZ(0);  
+}
+
+@transitiondelay: 0.2s;
+@headcolor:#0ef;
+
+a, a:hover, a:active, a:visited { 
+  text-decoration:none !important; 
+  -webkit-transition:all @transitiondelay ease-in-out;
+  -moz-transition:all @transitiondelay ease-in-out;
+  -o-transition:all @transitiondelay ease-in-out;
+  transition:all @transitiondelay ease-in-out;  
+} 
+
+// shared across
+a:active {
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+  // -webkit-transform-origin:0% 0%;
+}
+
+html, body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background:white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding:0px;
+    margin:0px;
+    text-align:left;
+    font-size:12pt;
+  	width:100%;
+  	height:100%;
+}
+
+input {
+  box-shadow:none;
+  border:1px solid #eee;
+}
+h1 {
+  font-size:29pt;
+  font-weight:200;
+  color:@headcolor;
+  margin:0px 0px 0.4em 0px;
+}
+h2,h3,h4,h5 {
+  font-weight:200;
+  color:@headcolor;
+}
+h2 { font-size:15pt; }
+
+
+@import "swipe-page.less";

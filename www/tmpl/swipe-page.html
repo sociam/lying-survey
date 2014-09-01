@@ -1,0 +1,6 @@
+<div class="swipe-page">
+	<div class="viewport" ng-transclude></div>
+	<div class="dots">
+		<div ng-repeat="d in dots track by $index"><a ng-class="{activepage:activepage==$index}" ng-click="clickDot($index)">&#9679;</a></div>
+	</div>
+</div>
