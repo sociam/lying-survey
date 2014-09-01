@@ -184,38 +184,6 @@
                     <div ng-class="{btn:true, 'btn-default':true, bluebg:true, 'active': resp.qdemo.gender=='other'}" ng-click="resp.qdemo.gender='other'">Other:</div>
                     <input ng-model="resp.qdemo.genderother" type='text' />
                 </div>
-                <div class="likert">
-                    <div class="title">What sector do you work in?</div>
-                    <select ng-model="resp.qdemo.worksector">
-                        <option>(Undisclosed)</option>
-                        <option>Student</option>
-                        <option>Unemployed</option>
-                        <option>Self Employed/Other</option>
-                        <option>Management occupations</option>
-                        <option>Business and financial operations occupations</option>
-                        <option>Computer and mathematical occupations</option>
-                        <option>Architecture and engineering occupations</option>
-                        <option>Life, physical, and social science occupations</option>
-                        <option>Community and social services occupations</option>
-                        <option>Legal occupations</option>
-                        <option>Education, training, and library occupations</option>
-                        <option>Arts, design, entertainment, sports, and media occupations</option>
-                        <option>Healthcare practitioners and technical occupations</option>
-                        <option>Healthcare support occupations</option>
-                        <option>Protective service occupations</option>
-                        <option>Food preparation and serving related occupations</option>
-                        <option>Building and grounds cleaning and maintenance occupations</option>
-                        <option>Personal care and service occupations</option>
-                        <option>Sales and related occupations</option>
-                        <option>Office and administrative support occupations</option>
-                        <option>Farming, fishing, and forestry occupations</option>
-                        <option>Construction and extraction occupations</option>
-                        <option>Installation, maintenance, and repair occupations</option>
-                        <option>Production occupations</option>
-                        <option>Transportation and material moving occupations</option>
-                        <option>Military specific occupations</option>
-                    </select>
-                </div>
             </div><div class="col2">
                 <h2>How much time do you use accessing social media?</h2> 
 
@@ -234,8 +202,44 @@
                     <div class='lbl'>very little time - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.qdemo.smtabletother=='1'}" ng-click="resp.qdemo.smtabletother=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.qdemo.smtabletother=='2'}" ng-click="resp.qdemo.smtabletother=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.qdemo.smtabletother=='3'}" ng-click="resp.qdemo.smtabletother=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.qdemo.smtabletother=='4'}" ng-click="resp.qdemo.smtabletother=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.qdemo.smtabletother=='5'}" ng-click="resp.qdemo.smtabletother=5">5</div><div class='lbl'> - significant time</div>
                 </div>
             </div>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('qdemo',resp.qdemo)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-
+        </div><div class="page">
+            <h1> Question 13 </h1>
+            <h2>Which of the following sectors best describe your occupation?</h2>
+                <div class="col1">
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a1" id="qwa1"><label class="txt" for="qwa1">(Undisclosed)</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a2" id="qwa2"><label class="txt" for="qwa2">Student</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a3" id="qwa3"><label class="txt" for="qwa3">Full-time parent</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a4" id="qwa4"><label class="txt" for="qwa4">Unemployed</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a5" id="qwa5"><label class="txt" for="qwa5">Self Employed/Other</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a6" id="qwa6"><label class="txt" for="qwa6">Management occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a7" id="qwa7"><label class="txt" for="qwa7">Business and financial operations occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a8" id="qwa8"><label class="txt" for="qwa8">Computer and mathematical occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a9" id="qwa9"><label class="txt" for="qwa9">Architecture and engineering occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a10" id="qwa10"><label class="txt" for="qwa10">Life, physical, and social science occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a11" id="qwa11"><label class="txt" for="qwa11">Community and social services occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a12" id="qwa12"><label class="txt" for="qwa12">Legal occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a13" id="qwa13"><label class="txt" for="qwa13">Education, training, and library occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a14" id="qwa14"><label class="txt" for="qwa14">Arts, design, entertainment, sports, and media occupations</label></div>
+                </div><div class="col2">
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a15" id="qwa15"><label class="txt" for="qwa15">Healthcare practitioners and technical occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a16" id="qwa16"><label class="txt" for="qwa16">Healthcare support occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a17" id="qwa17"><label class="txt" for="qwa17">Protective service occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a18" id="qwa18"><label class="txt" for="qwa18">Food preparation and serving related occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a19" id="qwa19"><label class="txt" for="qwa19">Building, grounds cleaning and maintenance occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a20" id="qwa20"><label class="txt" for="qwa20">Personal care and service occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a21" id="qwa21"><label class="txt" for="qwa21">Sales and related occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a22" id="qwa22"><label class="txt" for="qwa22">Office and administrative support occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a23" id="qwa23"><label class="txt" for="qwa23">Farming, fishing, and forestry occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a24" id="qwa24"><label class="txt" for="qwa24">Construction and extraction occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a25" id="qwa25"><label class="txt" for="qwa25">Installation, maintenance, and repair occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a26" id="qwa26"><label class="txt" for="qwa26">Production occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a27" id="qwa27"><label class="txt" for="qwa27">Transportation and material moving occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.qwork.a28" id="qwa28"><label class="txt" for="qwa28">Military specific occupations</label></div>
+                </div>
+			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
+			<div class="btn-next btn btn-default" ng-click="next('qwork',resp.qwork)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 		</div><div class="page">
 
 			<h1>You're done! Thank you for taking part!</h1>
