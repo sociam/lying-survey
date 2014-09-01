@@ -17,13 +17,13 @@
 				We will then delete your data and confirm this.
 			</p>
 			<div class="infobox">
-				<p class='ergo'> University of Southampton ERGO Ethics Approval: #11458 </p>
+				<p class='ergo'> University of Southampton 
+				<br>Ethics Approval: ERGO #11458 </p>
 				<p class='investigators'>  Investigators: 
 					<ul>
 						<li> Max Van Kleek (<a href="http://twitter.com/emax" target="_top">@emax</a>, emax@ecs.soton.ac.uk) </li>
 						<li> Daniel A. Smith (<a href="http://twitter.com/drdanielasmith" target="_top">@drdanielasmith</a>, ds@ecs.soton.ac.uk)</li>
 						<li> Dave Murray-Rust (d.murray-rust@ed.ac.uk)</li>
-						<li> Amy Guy (Amy.Guy@ed.ac.uk) </li>
 						<li> Laura Dragan (lcd@ecs.soton.ac.uk)</li>
 					</ul>
 				</p>
@@ -34,7 +34,7 @@
 			</p>
 
 			<div class="">
-				<input type="checkbox" ng-model="resp.start" value="false"> - I'm at least 18 years old and understand the above 
+				<input type="checkbox" ng-model="resp.start" value="false"> - I'm at least 18 years old and understand the above.
 			</div>
 
 			<div class="btn-next btn btn-default" ng-disabled="!resp.start" ng-click="startSurvey()">Start the survey!</div>
@@ -43,10 +43,10 @@
 
 			<h1>Your unique participant ID:</h1>
 
-			<p> We have randomly generated you the following participant ID.  </p>
+			<p> We have randomly generated the following participant ID for your responses.  </p>
 
 			<p>
-				Please write this number down and keep it if you might wish to have us later retract your data or to
+				Please write this code down and keep it if you might wish to have us later retract your data or to
 				prove that you completed the survey.
 			</p>
 
@@ -309,7 +309,7 @@
 				Thanks, Max, Dan, Dave, Amy and Laura.
 			</p>
 
-			<p class='investigators'>  Investigators: 
+			<div class='infobox'>Investigators: 
 				<ul>
 					<li> Max Van Kleek (<a href="http://twitter.com/emax" target="_top">@emax</a>, emax@ecs.soton.ac.uk) 
 					<li> Daniel A. Smith (<a href="http://twitter.com/drdanielasmith" target="_top">@drdanielasmith</a>, ds@ecs.soton.ac.uk)
@@ -317,7 +317,10 @@
 					<li> Amy Guy (Amy.Guy@ed.ac.uk) 
 					<li> Laura Dragan (lcd@ecs.soton.ac.uk)
 				</ul>
-			</p>
-			<div class="btn btn-default" ng-click="startOver()"> Start Again (New person) </div>
+			</div>
+			<div>
+				Please feel free to contact us at any of the above addresses if you have questions	or concerns.
+			</div>
+			<div class="btn btn-default" style="float:right" ng-click="startOver()"> Start Again (new person) <span class="glyphicon glyphicon-random"></span></div>
 		</div></swipe-page>
 </div>
