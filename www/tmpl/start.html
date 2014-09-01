@@ -101,7 +101,7 @@
             <h1> Question 12 - Foursquare </h1>
             <h2>If you use foursquare, please answer the following questions:</h2>
 
-            <h2>a. Have you ever ‘checked in’ to places you were not? If yes, why? </h2>
+            <h2>a. Have you ever ‘checked in’ to places you were not? If yes, why? If not, would you consider it (and why not?)?</h2>
             <textarea ng-model="resp.q12.fakecheckin"></textarea>			
             <h2>b. Do you have more than one foursquare account? If so, why? </h2>
             <textarea ng-model="resp.q12.multipleacct"></textarea>			      
@@ -121,8 +121,11 @@
 				<div class='lbl'>never - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q13.postvideos=='1'}" ng-click="resp.q13.postvideos=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q13.postvideos=='2'}" ng-click="resp.q13.postvideos=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q13.postvideos=='3'}" ng-click="resp.q13.postvideos=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q13.postvideos=='4'}" ng-click="resp.q13.postvideos=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q13.postvideos=='5'}" ng-click="resp.q13.postvideos=5">5</div><div class='lbl'> - several times a week</div>
 			</div>
 
-            <h2>Do you post videos under multiple accounts?  If so, how many and why? </h2>
-            <textarea ng-model="resp.q13.multipleacct"></textarea>			      
+            <h2>Do you post videos under multiple channels?  If so, how many and why? </h2>
+            <textarea ng-model="resp.q13.multiplechan"></textarea>			      
+
+			<h2>Is there any information you choose to <i> not </i> to disclose on your YouTube channel ?  (real name, personal details, location, real identity?) Why?</h2>
+            <textarea ng-model="resp.q13.infowithheld"></textarea>
 
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q13',resp.q13)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
@@ -135,6 +138,9 @@
 
             <h2>Do you maintain multiple tumblrs?  If so, how many and why? </h2>
             <textarea ng-model="resp.q14.multipletumblrs"></textarea>			      
+
+			<h2>Is there any information you choose to <i> not </i> to disclose on your tumblrs ?  (real name, personal details, location?) Why?</h2>
+            <textarea ng-model="resp.q14.infowithheld"></textarea>
 
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q14',resp.q14)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
