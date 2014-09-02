@@ -20,13 +20,15 @@ var requireParams = function (req, res, params) {
 };
 
 // CORS
+/*
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     next();
 });
+*/
 
-app.post('/submit', function(req, res) {
+app.post('/', function(req, res) {
     if (requireParams(req, res, ["uuid", "question_id", "answer"])){
         return; // it handled the response
     }

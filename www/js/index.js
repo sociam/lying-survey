@@ -16,18 +16,23 @@ angular.module('survey', ['ui.router', 'ngAnimate'])
 						sa(function() { $scope.resp = {}; });
 					};
 					
-                var submitAnswers = function (uuid, question_id, answer, misc) {
-                    if (!misc) { misc = ""; }
-                    if ($scope.userid === undefined || $scope.resp.start) { console.log('skipping!'); return; }
-                    answer = JSON.stringify(answer);
-                    misc = JSON.stringify(misc);
-                    jQuery.ajax({
-                        url: "http://localhost:3000/submit", // customise this
-                        type: "POST",
-                        data: {"uuid": uuid, "question_id": question_id, "answer": answer, "misc": misc},
-                        success: function () { console.log("submitted successfully"); },
-                        error: function (jqXHR, textStatus, errorThrown) { console.log("submission failure", textStatus, errorThrown); },
-                    });
+                var submitAnswers = function (userid, question_id, answer, misc) {
+                    try {
+                        console.log("submitAnswers");
+                        if (!misc) { misc = ""; }
+                        if (userid === undefined) { console.log('skipping!'); return; }
+                        answer = JSON.stringify(answer);
+                        misc = JSON.stringify(misc);
+                        jQuery.ajax({
+                            url: "submit", // customise this
+                            type: "POST",
+                            data: {"uuid": userid, "question_id": question_id, "answer": answer, "misc": misc},
+                            success: function () { console.log("submitted successfully"); },
+                            error: function (jqXHR, textStatus, errorThrown) { console.log("submission failure", textStatus, errorThrown); },
+                        });
+                    } catch (e) {
+                        console.error("submitAnswers error", e);
+                    }
                 };
                 window.sa = submitAnswers;
 			    $scope.stage = 0;
