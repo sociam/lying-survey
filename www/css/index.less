@@ -84,7 +84,7 @@ h2 { font-size:15pt; }
     }
 
     font-size:14pt;    
-    .title { margin:0px 0px 10px 0px; color:@headcolor; }
+    .title { font-size:14pt; margin:0px 0px 10px 0px; color:@headcolor; }
     padding:10px 0px 10px 0px;
     div.lbl, div.btn { 
       display:inline-block; margin:0px;     
@@ -92,6 +92,10 @@ h2 { font-size:15pt; }
     }
     div.lbl { 
       margin:0px 10px 0px 10px; 
+    }
+    div.btn { 
+      font-size:13pt;
+      padding:12px 18px;
     }
     margin:0px 0px 0px 0px;
   }
@@ -125,14 +129,18 @@ h2 { font-size:15pt; }
       font-size:10pt;
       top:50px;
       right:50px;
-      padding:30px;
+      padding:20px;
       border:1px solid #eee;
+      ul { 
+        padding-top:6px;
+        padding-left:16px;
+      }
   }
   .splash { background-color:#eee; }
+  em { 
+      color:#2b0;
+  }
 }
-
-
-
 
 
 @import "swipe-page.less";
