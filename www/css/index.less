@@ -27,7 +27,7 @@ a:active {
 html, body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    -webkit-user-select: text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background:white;
     overflow-y: auto;
     overflow-x: hidden;
@@ -96,6 +96,10 @@ h2 { font-size:15pt; }
     div.btn { 
       font-size:13pt;
       padding:12px 18px;
+    }
+    div.btn.active {
+      font-weight: bold;
+      border-color: black;
     }
     margin:0px 0px 0px 0px;
   }
