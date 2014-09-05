@@ -48,7 +48,7 @@
 				please confirm you are 18 years old in order to proceed
 			</div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 
 			<h1>Your unique participant ID:</h1>
 
@@ -63,7 +63,7 @@
 
 			<div class="btn-next btn btn-default" ng-click="next('q0', {})">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 			<h1> Question 1 </h1>		
 			<h2> How much do you use these social media platforms? </h2>
 			<div class="col1">
@@ -110,7 +110,7 @@
 			</div>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q1',resp.q1)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 			<h1> Question 2 </h1>		
 			<h2> How concerned are you about your privacy online? </h2>
 			<div class="likert">
@@ -125,7 +125,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next('q2',resp.q2)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 			<h1> Question 3 - Privacy: Whom and What? </h1>		
 
 			<h2> Indicate how much you agree with the following statements: </h2>
@@ -165,7 +165,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 
             <h1> Question 4 : Telling Untruths Online </h1>
             <h2>Have you ever told "untruths" on social media? This includes any misleading, inaccurate or ficticious information, whether only very minor, bending of the truth, or bigger things, for any reason. What did you tell "untruths" about, and why? Give examples of the kinds of "untruths" you have told (but <b>don't include any personally identifying information, please!</b>)</h2>
@@ -183,13 +183,13 @@
 
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>	
 			<div class="btn-next btn btn-default" ng-click="next('q3',resp.q3)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><!--<div class="page"> 
+		</div><!--<div class="page" ng-show="resp.start"> 
             <h1> Question 4 </h1>
             <h2>Have you lied about other things besides what you were doing/where you were on social media? How often and why?</h2>
 			<textarea ng-model="resp.q4.answer"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q4',resp.q4)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div>--><div class="page">
+		</div>--><div class="page" ng-show="resp.start">
             <h1> Question 5: Real names and Identities </h1>
             <h2>Do you use pseudonyms on any social media platforms? Why do you do this? Do you try to hide your real name/identity?</h2>
 			<textarea ng-model="resp.q5.answer"></textarea>
@@ -197,19 +197,19 @@
 			<textarea ng-model="resp.q5.personas"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>		
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page"> 
+		</div><div class="page" ng-show="resp.start"> 
             <h1> Question 6 : Deletion </h1>
             <h2>Have you ever deleted something that you posted? What made you do this? Did deleting it accomplish what you intended?</h2>
 			<textarea ng-model="resp.q6.answer"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
             <h1> Question 7 : Privacy violations </h1>
             <h2>Have you ever felt like your privacy was compromised through social media? Can you describe briefly what happened? How did this incident change how you subsequently social media platforms? (Again, <b>please do not include personally identifying information in your answer</b>.)</h2>
 			<textarea ng-model="resp.q7.answer"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
             <h1> Question 8 - Foursquare </h1>
             <h2>If you use foursquare, please answer the following questions:</h2>
 
@@ -221,7 +221,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">
+        </div><div class="page" ng-show="resp.start">
             <h1> Question 9 - YouTube and Vlogging </h1>
 
             <h2>If you use YouTube, please answer the following questions:</h2>
@@ -240,7 +240,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>		
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">        
+        </div><div class="page" ng-show="resp.start">        
 
             <h1> Question 10 - Tumblr </h1>
 
@@ -255,7 +255,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">        
+        </div><div class="page" ng-show="resp.start">        
 
             <h1> Question 11 - Tweeting </h1>
 
@@ -275,7 +275,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev</div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">        
+        </div><div class="page" ng-show="resp.start">        
             <h1> Demographic Questions </h1>
             <h2>Demographic questions, these are optional but help us to analyse answers.</h2>
 			<div class="col1">
@@ -313,7 +313,7 @@
             </div>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-        </div><div class="page">
+        </div><div class="page" ng-show="resp.start">
             <h1> Demographic Questions - 2 </h1>
             <h2>Which of the following sectors best describe your occupation(s)?</h2>
                 <div class="col1">
@@ -351,7 +351,7 @@
                 </div>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 
 			<img class='cat' src="img/cat-begging.jpg">
 
