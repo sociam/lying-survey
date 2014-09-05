@@ -105,6 +105,8 @@
 					<div class="title">tumblr:</div>
 					<div class='lbl'>never - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q1.tumblr=='1'}" ng-click="resp.q1.tumblr=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q1.tumblr=='2'}" ng-click="resp.q1.tumblr=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q1.tumblr=='3'}" ng-click="resp.q1.tumblr=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q1.tumblr=='4'}" ng-click="resp.q1.tumblr=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q1.tumblr=='5'}" ng-click="resp.q1.tumblr=5">5</div><div class='lbl'> - many times a day</div>
 				</div>
+				<h2>any others?</h2>
+				<textarea ng-model="resp.q1.other"></textarea>
 			</div>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q1',resp.q1)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
