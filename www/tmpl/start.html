@@ -48,7 +48,7 @@
 				please confirm you are 18 years old in order to proceed
 			</div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 
 			<h1>Your unique participant ID:</h1>
 
@@ -63,7 +63,7 @@
 
 			<div class="btn-next btn btn-default" ng-click="next('q0', {})">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 			<h1> Question 1 </h1>		
 			<h2> How much do you use these social media platforms? </h2>
 			<div class="col1">
@@ -105,10 +105,12 @@
 					<div class="title">tumblr:</div>
 					<div class='lbl'>never - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q1.tumblr=='1'}" ng-click="resp.q1.tumblr=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q1.tumblr=='2'}" ng-click="resp.q1.tumblr=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q1.tumblr=='3'}" ng-click="resp.q1.tumblr=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q1.tumblr=='4'}" ng-click="resp.q1.tumblr=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q1.tumblr=='5'}" ng-click="resp.q1.tumblr=5">5</div><div class='lbl'> - many times a day</div>
 				</div>
+				<h2>any others?</h2>
+				<textarea ng-model="resp.q1.other"></textarea>
 			</div>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q1',resp.q1)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 			<h1> Question 2 </h1>		
 			<h2> How concerned are you about your privacy online? </h2>
 			<div class="likert">
@@ -123,7 +125,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next('q2',resp.q2)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 			<h1> Question 3 - Privacy: Whom and What? </h1>		
 
 			<h2> Indicate how much you agree with the following statements: </h2>
@@ -154,7 +156,7 @@
 			</div>
 
 			<div class="likert">
-				<div class="title"> I am concerned for that people will come to the <em>wrong impressions</em> about me. </div>
+				<div class="title"> I am concerned that people will come to the <em>wrong impressions</em> about me. </div>
 
 				<div class='lbl'>strongly disagree - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q3.impression=='1'}" ng-click="resp.q3.impression=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q3.impression=='2'}" ng-click="resp.q3.impression=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q3.impression=='3'}" ng-click="resp.q3.impression=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q3.impression=='4'}" ng-click="resp.q3.impression=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q3.impression=='5'}" ng-click="resp.q3.impression=5">5</div><div class='lbl'> - strongly agree</div>
 			</div>
@@ -163,10 +165,10 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 
             <h1> Question 4 : Telling Untruths Online </h1>
-            <h2>Have you ever told "untruths" on social media, whether they were little lies or bigger ones? What did you lie about, and why? Give examples of the kinds of lies you have told (but <b>don't include any personally identifying information, please!</b>)</h2>
+            <h2>Have you ever told "untruths" on social media? This includes any misleading, inaccurate or ficticious information, whether only very minor, bending of the truth, or bigger things, for any reason. What did you tell "untruths" about, and why? Give examples of the kinds of "untruths" you have told (but <b>don't include any personally identifying information, please!</b>)</h2>
 			<textarea ng-model="resp.q4.answer"></textarea>
 
 			<h2> How often do you tell untruths/lies on social media? </h2>
@@ -181,37 +183,37 @@
 
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>	
 			<div class="btn-next btn btn-default" ng-click="next('q3',resp.q3)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><!--<div class="page"> 
+		</div><!--<div class="page" ng-show="resp.start"> 
             <h1> Question 4 </h1>
             <h2>Have you lied about other things besides what you were doing/where you were on social media? How often and why?</h2>
 			<textarea ng-model="resp.q4.answer"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next('q4',resp.q4)">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div>--><div class="page">
+		</div>--><div class="page" ng-show="resp.start">
             <h1> Question 5: Real names and Identities </h1>
-            <h2>Do hide your real name/identity on any social media platforms? Do you use pseudonyms? Why do you do this?</h2>
+            <h2>Do you use pseudonyms on any social media platforms? Why do you do this? Do you try to hide your real name/identity?</h2>
 			<textarea ng-model="resp.q5.answer"></textarea>
             <h2>Have you created any fictional personas (e.g., characters, <i>alter-egos</i>) to use on social media? If so, what for and why? (Again, <b>please do not include the names or specifics of your personas here</b>).</h2>
 			<textarea ng-model="resp.q5.personas"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>		
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page"> 
-            <h1> Question 6 : Deletion and Self-Censorship </h1>
-            <h2>Have you ever deleted anything that you posted in order to prevent the wrong people from seeing it?  Can you describe why you did this?</h2>
+		</div><div class="page" ng-show="resp.start"> 
+            <h1> Question 6 : Deletion </h1>
+            <h2>Have you ever deleted something that you posted? What made you do this? Did deleting it accomplish what you intended?</h2>
 			<textarea ng-model="resp.q6.answer"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>			
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
             <h1> Question 7 : Privacy violations </h1>
             <h2>Have you ever felt like your privacy was compromised through social media? Can you describe briefly what happened? How did this incident change how you subsequently social media platforms? (Again, <b>please do not include personally identifying information in your answer</b>.)</h2>
 			<textarea ng-model="resp.q7.answer"></textarea>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
             <h1> Question 8 - Foursquare </h1>
             <h2>If you use foursquare, please answer the following questions:</h2>
 
-            <h2>a. Have you ever ‘checked in’ to places you were not? If yes, why? If not, would you consider it (and why not?)?</h2>
+            <h2>a. Have you ever ‘checked in’ to places you were not in? If yes, why? If not, would you consider it (and why or why not?)?</h2>
             <textarea ng-model="resp.q8.fakecheckin"></textarea>			
             <h2>b. Do you have more than one foursquare account? If so, why? </h2>
             <textarea ng-model="resp.q8.multipleacct"></textarea>			      
@@ -219,7 +221,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">
+        </div><div class="page" ng-show="resp.start">
             <h1> Question 9 - YouTube and Vlogging </h1>
 
             <h2>If you use YouTube, please answer the following questions:</h2>
@@ -238,7 +240,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>		
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">        
+        </div><div class="page" ng-show="resp.start">        
 
             <h1> Question 10 - Tumblr </h1>
 
@@ -253,7 +255,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">        
+        </div><div class="page" ng-show="resp.start">        
 
             <h1> Question 11 - Tweeting </h1>
 
@@ -263,7 +265,7 @@
 			</div>
 
 			<div class="likert">
-	        	<div class='title'>How many separate twitter accounts do you have?</div>
+	        	<div class='title'>How many separate twitter accounts do you maintain?</div>
 				<div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q11.twitteraccts=='0'}" ng-click="resp.q11.twitteraccts=0">0</div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q11.twitteraccts=='1'}" ng-click="resp.q11.twitteraccts=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q11.twitteraccts=='2'}" ng-click="resp.q11.twitteraccts=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q11.twitteraccts=='3'}" ng-click="resp.q11.twitteraccts=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q11.twitteraccts=='4'}" ng-click="resp.q11.twitteraccts=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q11.twitteraccts=='5'}" ng-click="resp.q11.twitteraccts=5">5+</div>
 			</div>
 
@@ -273,7 +275,7 @@
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev</div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
 
-        </div><div class="page">        
+        </div><div class="page" ng-show="resp.start">        
             <h1> Demographic Questions </h1>
             <h2>Demographic questions, these are optional but help us to analyse answers.</h2>
 			<div class="col1">
@@ -292,28 +294,28 @@
                     <input ng-model="resp.q12.genderdisclosed" type='text' />
                 </div>
             </div><div class="col2">
-                <h2>How much time do you use accessing social media?</h2> 
+                <h2>How much time do you use accessing social media, on average?</h2> 
 
                 <div class="likert">
                     <div class="title">On the web</div>
-                    <div class='lbl'>very little time - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q12.smweb=='1'}" ng-click="resp.q12.smweb=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q12.smweb=='2'}" ng-click="resp.q12.smweb=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q12.smweb=='3'}" ng-click="resp.q12.smweb=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q12.smweb=='4'}" ng-click="resp.q12.smweb=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q12.smweb=='5'}" ng-click="resp.q12.smweb=5">5</div><div class='lbl'> - significant time</div>
+                    <div class='lbl'>no time - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q12.smweb=='1'}" ng-click="resp.q12.smweb=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q12.smweb=='2'}" ng-click="resp.q12.smweb=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q12.smweb=='3'}" ng-click="resp.q12.smweb=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q12.smweb=='4'}" ng-click="resp.q12.smweb=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q12.smweb=='5'}" ng-click="resp.q12.smweb=5">5</div><div class='lbl'> - at least a few hours per day</div>
                 </div>
 
                 <div class="likert">
                     <div class="title">On a mobile phone</div>
-                    <div class='lbl'>very little time - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q12.smphone=='1'}" ng-click="resp.q12.smphone=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q12.smphone=='2'}" ng-click="resp.q12.smphone=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q12.smphone=='3'}" ng-click="resp.q12.smphone=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q12.smphone=='4'}" ng-click="resp.q12.smphone=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q12.smphone=='5'}" ng-click="resp.q12.smphone=5">5</div><div class='lbl'> - significant time</div>
+                    <div class='lbl'>no time - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q12.smphone=='1'}" ng-click="resp.q12.smphone=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q12.smphone=='2'}" ng-click="resp.q12.smphone=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q12.smphone=='3'}" ng-click="resp.q12.smphone=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q12.smphone=='4'}" ng-click="resp.q12.smphone=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q12.smphone=='5'}" ng-click="resp.q12.smphone=5">5</div><div class='lbl'> - at least a few hours per day</div>
                 </div>
 
                 <div class="likert">
                     <div class="title">On a tablet or other device</div>
-                    <div class='lbl'>very little time - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q12.smtabletother=='1'}" ng-click="resp.q12.smtabletother=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q12.smtabletother=='2'}" ng-click="resp.q12.smtabletother=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q12.smtabletother=='3'}" ng-click="resp.q12.smtabletother=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q12.smtabletother=='4'}" ng-click="resp.q12.smtabletother=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q12.smtabletother=='5'}" ng-click="resp.q12.smtabletother=5">5</div><div class='lbl'> - significant time</div>
+                    <div class='lbl'>no time - </div><div ng-class="{btn:true, 'btn-default':true, likert1:true, 'active':resp.q12.smtabletother=='1'}" ng-click="resp.q12.smtabletother=1">1</div><div ng-class="{btn:true, 'btn-default':true, likert2:true, 'active':resp.q12.smtabletother=='2'}" ng-click="resp.q12.smtabletother=2">2</div><div ng-class="{btn:true, 'btn-default':true, likert3:true, 'active':resp.q12.smtabletother=='3'}" ng-click="resp.q12.smtabletother=3">3</div><div ng-class="{btn:true, 'btn-default':true, likert4:true, 'active':resp.q12.smtabletother=='4'}" ng-click="resp.q12.smtabletother=4">4</div><div ng-class="{btn:true, 'btn-default':true, likert5:true, 'active':resp.q12.smtabletother=='5'}" ng-click="resp.q12.smtabletother=5">5</div><div class='lbl'> - at least a few hours per day</div>
                 </div>
             </div>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-        </div><div class="page">
+        </div><div class="page" ng-show="resp.start">
             <h1> Demographic Questions - 2 </h1>
-            <h2>Which of the following sectors best describe your occupation?</h2>
+            <h2>Which of the following sectors best describe your occupation(s)?</h2>
                 <div class="col1">
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a1" id="qwa1"><label class="txt" for="qwa1">(Undisclosed)</label></div>
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a2" id="qwa2"><label class="txt" for="qwa2">Student</label></div>
@@ -328,7 +330,7 @@
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a11" id="qwa11"><label class="txt" for="qwa11">Community and social services occupations</label></div>
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a12" id="qwa12"><label class="txt" for="qwa12">Legal occupations</label></div>
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a13" id="qwa13"><label class="txt" for="qwa13">Education, training, and library occupations</label></div>
-                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a14" id="qwa14"><label class="txt" for="qwa14">Arts, design, entertainment, sports, and media occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a14" id="qwa14"><label class="txt" for="qwa14">Arts and design occupations</label></div>
                 </div><div class="col2">
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a15" id="qwa15"><label class="txt" for="qwa15">Healthcare practitioners and technical occupations</label></div>
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a16" id="qwa16"><label class="txt" for="qwa16">Healthcare support occupations</label></div>
@@ -344,10 +346,12 @@
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a26" id="qwa26"><label class="txt" for="qwa26">Production occupations</label></div>
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a27" id="qwa27"><label class="txt" for="qwa27">Transportation and material moving occupations</label></div>
                     <div class="checkboxinput"><input type="checkbox" ng-model="resp.q13.a28" id="qwa28"><label class="txt" for="qwa28">Military specific occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.q14.a29" id="qwa29"><label class="txt" for="qwa28">Sports occupations</label></div>
+                    <div class="checkboxinput"><input type="checkbox" ng-model="resp.q15.a30" id="qwa30"><label class="txt" for="qwa28">Media and entertainment occupations</label></div>
                 </div>
 			<div class="btn-prev btn btn-default" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span> Prev </div>
 			<div class="btn-next btn btn-default" ng-click="next()">Next <span class="glyphicon glyphicon-chevron-right"></span></div>
-		</div><div class="page">
+		</div><div class="page" ng-show="resp.start">
 
 			<img class='cat' src="img/cat-begging.jpg">
 
